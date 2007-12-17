@@ -14,7 +14,6 @@ Patch0:		php-haru-badsearch.patch
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	file
 BuildRequires:	libharu-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 PHP interface to Haru Free PDF Library for creating PDF documents.
