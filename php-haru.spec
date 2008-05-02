@@ -5,7 +5,7 @@
 Summary:	Haru PDF functions
 Name:		php-%{modname}
 Version:	0.0.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/haru
@@ -14,7 +14,7 @@ Patch0:		php-haru-badsearch.patch
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	file
 BuildRequires:	libharu-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PHP interface to Haru Free PDF Library for creating PDF documents.
