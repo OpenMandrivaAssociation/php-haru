@@ -4,8 +4,8 @@
 
 Summary:	Haru PDF functions
 Name:		php-%{modname}
-Version:	1.0.0
-Release:	%mkrel 19
+Version:	1.0.3
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/haru
