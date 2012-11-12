@@ -1,0 +1,50 @@
+Index: config.m4
+===================================================================
+RCS file: /repository/pecl/haru/config.m4,v
+retrieving revision 1.4
+diff -u -p -r1.4 config.m4
+--- config.m4	20 Mar 2007 12:22:22 -0000	1.4
++++ config.m4	5 Aug 2007 19:35:17 -0000
+@@ -15,7 +15,7 @@ fi
+ 
+ if test "$PHP_HARU" != "no"; then
+   
+-  SEARCH_PATH="/usr/local/ /usr/"
++  SEARCH_PATH="/usr/local /usr"
+   SEARCH_FOR="include/hpdf.h"
+   if test "$PHP_HARU" = "yes"; then
+ 	AC_MSG_CHECKING([for Haru in default path])
+@@ -44,14 +44,14 @@ if test "$PHP_HARU" != "no"; then
+   LIBSYMBOL=HPDF_Stream_WriteToStreamWithDeflate
+ 
+   if test "$PHP_ZLIB_DIR" != "no"; then
+-    PHP_ADD_LIBRARY_WITH_PATH(z, $PHP_ZLIB_DIR/$PHP_LIBDIR, HARU_SHARED_LIBADD)
++    dnl PHP_ADD_LIBRARY_WITH_PATH(z, $PHP_ZLIB_DIR/$PHP_LIBDIR, HARU_SHARED_LIBADD)
+     PHP_CHECK_LIBRARY($LIBNAME, $LIBSYMBOL, [], [
+       AC_MSG_ERROR([Haru configure failed. Please check config.log for more information.])
+     ], [
+       -L$PHP_ZLIB_DIR/$PHP_LIBDIR -L$HARU_DIR/$PHP_LIBDIR 
+     ])  
+   else
+-    PHP_ADD_LIBRARY(z,, HARU_SHARED_LIBADD)
++    dnl PHP_ADD_LIBRARY(z,, HARU_SHARED_LIBADD)
+     PHP_CHECK_LIBRARY($LIBNAME, $LIBSYMBOL, [], [
+       AC_MSG_ERROR([Please check if the prefix is correct and try adding --with-zlib-dir=<DIR>. See config.log for more information.])
+     ], [
+@@ -63,14 +63,14 @@ if test "$PHP_HARU" != "no"; then
+   LIBSYMBOL=HPDF_LoadPngImageFromFile
+ 
+   if test "$PHP_PNG_DIR" != "no"; then
+-    PHP_ADD_LIBRARY_WITH_PATH(png, $PHP_PNG_DIR/$PHP_LIBDIR, HARU_SHARED_LIBADD)
++    dnl PHP_ADD_LIBRARY_WITH_PATH(png, $PHP_PNG_DIR/$PHP_LIBDIR, HARU_SHARED_LIBADD)
+     PHP_CHECK_LIBRARY($LIBNAME, $LIBSYMBOL, [], [
+       AC_MSG_ERROR([Haru configure failed. Please check config.log for more information.])
+     ], [
+       -L$PHP_PNG_DIR/$PHP_LIBDIR -L$HARU_DIR/$PHP_LIBDIR 
+     ])  
+   else
+-    PHP_ADD_LIBRARY(png,, HARU_SHARED_LIBADD)
++    dnl PHP_ADD_LIBRARY(png,, HARU_SHARED_LIBADD)
+     PHP_CHECK_LIBRARY($LIBNAME, $LIBSYMBOL, [], [
+       AC_MSG_ERROR([Try adding --with-png-dir=<DIR>. Please check config.log for more information.])
+     ], [
