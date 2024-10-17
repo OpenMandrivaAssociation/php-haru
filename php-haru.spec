@@ -8,7 +8,7 @@ Version:	1.0.3
 Release:	%mkrel 2
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/haru
+URL:		https://pecl.php.net/package/haru
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		php-haru-badsearch.patch
 BuildRequires:	php-devel >= 3:5.2.0
