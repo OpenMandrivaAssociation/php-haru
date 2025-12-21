@@ -11,6 +11,11 @@ License:	PHP License
 URL:		https://pecl.php.net/package/haru
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		php-haru-badsearch.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	file
 BuildRequires:	libharu-devel
